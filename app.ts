@@ -17,3 +17,5 @@ app.use("/", index);
 app.use("/user", user);
 app.use("/main", main);
 app.use("/image", image);
+
+module.exports = app;
