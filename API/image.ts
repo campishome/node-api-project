@@ -120,3 +120,13 @@ router.post("/vote_check", (req, res) => {
         res.json(result);
     });
   });
+
+  //select vote_date 7 day
+  router.get("/select_Image/:imageid", (req, res) => {
+    let id = +req.params.imageid;
+    const sql="SELECT * FROM `Image` WHERE `image_id`=?";
+    conn.query(sql,[id], (err, result, fields)=>{
+        res.status(200);
+        res.json(result);
+    });
+  });

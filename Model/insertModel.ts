@@ -37,4 +37,6 @@ export interface votereq { ///-----------
     score:   number;
     vote_date: Date;
     image_id: number;
+    current_score: number;
+
 }

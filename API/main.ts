@@ -6,7 +6,7 @@ import{imageReq, imagereq, scorereq}from "../Model/insertModel";
 
 //vote
 router.get("/", (req, res) => {
-    const sql="SELECT User.username, Image.image_url, Image.image_id, User.user_id FROM User INNER JOIN Image ON Image.user_id = User.user_id ";
+    const sql="SELECT User.username, Image.image_url, Image.image_id, User.user_id , Image.current_score FROM User INNER JOIN Image ON Image.user_id = User.user_id ";
     conn.query(sql, (err, result, fields)=>{
         res.status(200);
         res.json(result);
