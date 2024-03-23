@@ -4,7 +4,7 @@ import { router as index } from "./API/index";
 import { router as user } from "./API/user";
 import { router as main } from "./API/main";
 import { router as image } from "./API/image";
-import { router as image_upload } from "./API/index";
+import { router as image_upload } from "./API/image_upload";
 import bodyParser from "body-parser";
 
 export const app = express();
